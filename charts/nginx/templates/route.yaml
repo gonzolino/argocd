@@ -3,7 +3,7 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: {{ .Chart.Name }}
   labels:
-    {{- include "nginx.labels" . | nindent 4 }}
+    app: nginx
 spec:
   to:
     kind: Service
