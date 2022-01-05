@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ include "nginx.fullname" . }}
+  labels:
+    {{- include "nginx.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "nginx.selectorLabels" . | nindent 4 }}
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

@@ -1,0 +1,9 @@
+# Default values for mychart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicas: 3
+
+image:
+  repository: nginxinc/nginx-unprivileged
+  tag: ""
